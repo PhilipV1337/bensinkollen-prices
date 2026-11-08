@@ -1,0 +1,24 @@
+BensinKollen - GitHub hourly price checker
+
+This ZIP contains ONLY the GitHub automation files. Do not replace your working iPhone app.
+
+1. Extract the ZIP on your Mac.
+2. In https://github.com/philipv1337/bensinkollen-prices choose Add file > Upload files.
+   Upload the .github/workflows/update-prices.yml and scripts/update_prices.py files,
+   keeping their folder paths. GitHub's web upload may not preserve hidden .github
+   folders reliably: if needed, use Add file > Create new file and enter the full path
+   .github/workflows/update-prices.yml, then paste its contents. Do the same for
+   scripts/update_prices.py.
+3. Commit changes.
+
+IMPORTANT: The hourly checker does not yet have an official direct EU XLSX download URL.
+To activate real imports, go to repository Settings > Secrets and variables > Actions
+> Variables, and create EU_WEEKLY_WORKBOOK_URL with a VERIFIED direct XLSX URL from
+European Commission Weekly Oil Bulletin. Do not use the webpage URL.
+Until configured, the workflow runs but intentionally does NOT change prices.
+The EU source publishes national averages weekly, not station-level live pump prices.
+
+Existing GitHub Pages URL remains:
+https://philipv1337.github.io/bensinkollen-prices/prices.json
+
+This package preserves your existing public prices.json and the working Expo app.
